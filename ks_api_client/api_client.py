@@ -402,7 +402,7 @@ class ApiClient(object):
                                          _preload_content=_preload_content,
                                          _request_timeout=_request_timeout,
                                          body=body)
-            print(query_params,headers,post_params,re.text)
+            print(query_params,headers,post_params,re)
             return re
         elif method == "PUT":
             return self.rest_client.PUT(url,
