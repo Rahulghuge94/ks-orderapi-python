@@ -395,13 +395,15 @@ class ApiClient(object):
                                             _preload_content=_preload_content,
                                             _request_timeout=_request_timeout)
         elif method == "POST":
-            return self.rest_client.POST(url,
+            re=self.rest_client.POST(url,
                                          query_params=query_params,
                                          headers=headers,
                                          post_params=post_params,
                                          _preload_content=_preload_content,
                                          _request_timeout=_request_timeout,
                                          body=body)
+            print(query_params,headers,post_params,res.text)
+            return re
         elif method == "PUT":
             return self.rest_client.PUT(url,
                                         query_params=query_params,
